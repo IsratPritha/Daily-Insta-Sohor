@@ -148,6 +148,8 @@ const showPosts = (posts) => {
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
     document.getElementById( "likedPost" ).innerHTML='';
+    document.getElementById( "display" ).innerHTML='';
+
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "likedPost" ).appendChild(div);
@@ -159,6 +161,7 @@ const displayLikedPosts = () => {
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
     document.getElementById("reportedPost").innerHTML='';
+    document.getElementById( "display" ).innerHTML='';
     reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reportedPost" ).appendChild(div);
